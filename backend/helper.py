@@ -5,7 +5,7 @@ from langchain.prompts import PromptTemplate
 llm_chain = None
 def generate_response(prompt):
     global llm_chain
-    if llm_chain == None:
+    if not llm_chain:
         initiation_schedule()
     return llm_chain.predict(human_input=prompt)
 

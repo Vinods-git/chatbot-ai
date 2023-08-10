@@ -32,7 +32,7 @@ const Chatbot = () => {
     console.error('Error:', error);
   });
     // Send the user message to the backend for processing
-    let url = "https://organic-computing-machine-4r96wjvx9jcjrv4-5000.app.github.dev"
+    let url = "http://127.0.0.1:8000"
     console.log(url)
     fetch(url + '/api/chatbot', {
         method: 'POST',
@@ -55,7 +55,7 @@ const Chatbot = () => {
 
   return (
     <div className="chatbot-container">
-      <div className="chatbot-conversation">
+      {/* <div className="chatbot-conversation">
         {messages.map((message, index) => (
           <div
             key={index}
@@ -73,7 +73,12 @@ const Chatbot = () => {
           placeholder="Type your message..."
         />
         <button type="submit">Send</button>
-      </form>
+      </form> */}
+      <header>
+        <h2>
+          Chatbot
+        </h2>
+      </header>
     </div>
   );
 };
